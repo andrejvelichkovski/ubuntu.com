@@ -6,30 +6,33 @@
 
 {% block outer_content %}
 
-<section class="p-strip--suru-topped is-bordered">
-  <div class="u-fixed-width">
-    <a href="/certified">&lsaquo; Certified hardware</a>
-  </div>
-  <br />
-  <div class="row">
-    <div class="col-8">
-      <h1>Ubuntu certified servers</h1>
-      <p>Using Ubuntu Server speeds up the ability to deploy physical infrastructure on bare metal as it is in the cloud.</p>
-      <p>Deploying on certified servers saves you time in choosing and testing what hardware you will use from a single server instance to the largest scale-out data-center environments.</p>
+<main class="is-paper">
+  <form class="row js-search-results p-section--deep">
+  <section class="p-section--hero">
+    <div class="row--25-75">
+      <div class="col">
+        {% with category="Server"%}
+          {% include "certified/shared/category-image.html" %}
+        {% endwith %}
+      </div>
+      <div class="col">
+        <div class="p-section--shallow">
+          <h1>
+            Ubuntu certified servers
+          </h1>
+        </div>
+        <div class="p-section--shallow">
+          <p>Using Ubuntu Server speeds up the ability to deploy physical infrastructure on bare metal as it is in the cloud.</p>
+          <p>Deploying on certified servers saves you time in choosing and testing what hardware you will use from a single server instance to the largest scale-out data-center environments.</p>  
+          {% with query=query, placeholder=placeholder %}
+            {% include "/certified/shared/_search-results-query-search-bar.html" %}
+          {% endwith %}
+        </div>
+      </div>
     </div>
-    <div class="col-4 u-vertically-center u-align--center u-hide--small u-hide--medium">
-      {{ image (
-        url="https://assets.ubuntu.com/v1/fdf83d49-Server.svg",
-        alt="",
-        width="136",
-        height="153",
-        hi_def=True,
-        loading="auto"
-        ) | safe
-      }}
-    </div>
-  </div>
-</section>
+  </section>
+
+  <hr/>
 
 {% with
   title="All certified servers",
@@ -45,5 +48,7 @@
 %}
   {% include "certified/shared/category-search-results.html" %}
 {% endwith %}
+  </form>
+</main>
 
 {% endblock %}
