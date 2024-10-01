@@ -11,7 +11,7 @@
       <div class="row--25-75">
         <div class="col u-hide--small">
           {% with category="Ubuntu Core"%}
-            {% include "certified/shared/category-image.html" %}
+            {% include "certified/search/category-image.html" %}
           {% endwith %}
         </div>
         <div class="col">
@@ -23,7 +23,7 @@
           <div class="p-section--shallow">
             <p>IoT vendors rely on Ubuntu for their devices, from drones and robots to edge gateways and development boards. Ubuntu Core delivers bullet-proof security, reliable updates and access to a rich ecosystem on 32 and 64-bit ARM and X86 platforms.</p>
             {% with query=query, placeholder=placeholder %}
-              {% include "/certified/shared/_search-results-query-search-bar.html" %}
+              {% include "/certified/search/_search-results-query-search-bar.html" %}
             {% endwith %}
           </div>
         </div>
@@ -42,7 +42,7 @@
       release_filters=release_filters,
       results=results
     %}
-      {% include "certified/shared/category-search-results.html" %}
+      {% include "certified/search/category-search-results.html" %}
     {% endwith %}
   </form>
 </main>

@@ -24,7 +24,7 @@
           <div class="p-section--shallow">
             <p>Low-power small-footprint System on a Chip (SoC) hardware is redefining the future of sustainable data centers.</p>
             {% with query=query, placeholder=placeholder %}
-              {% include "/certified/shared/_search-results-query-search-bar.html" %}
+              {% include "/certified/search/_search-results-query-search-bar.html" %}
             {% endwith %}
           </div>
         </div>
@@ -43,7 +43,7 @@
       release_filters=release_filters,
       results=results
     %}
-      {% include "certified/shared/category-search-results.html" %}
+      {% include "certified/search/category-search-results.html" %}
     {% endwith %}
   </form>
 </main>

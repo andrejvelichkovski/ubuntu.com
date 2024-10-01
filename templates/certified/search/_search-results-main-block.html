@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-3 p-side-navigation" id="drawer">
-    {% include "/certified/shared/_search-results-side-filters.html" %}
+    {% include "/certified/search/_search-results-side-filters.html" %}
   </div>
   {% if total_results > 0 %}
     <div class="col-9">
@@ -8,7 +8,7 @@
         results=results,
         vendor_page=vendor_page
         %}
-        {% include "/certified/shared/_search-results-table.html" %}
+        {% include "/certified/search/_search-results-table.html" %}
       {% endwith %}
       <div class="row">
         <div class="col-5">
@@ -39,7 +39,7 @@
     </div>
   {% else %}
     <div class="col-9">
-      {% include "/certified/shared/_no-results.html" %}
+      {% include "/certified/search/_no-results.html" %}
     </div>
   {% endif %}
 </div>

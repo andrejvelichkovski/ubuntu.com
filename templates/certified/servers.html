@@ -25,7 +25,7 @@
           <p>Using Ubuntu Server speeds up the ability to deploy physical infrastructure on bare metal as it is in the cloud.</p>
           <p>Deploying on certified servers saves you time in choosing and testing what hardware you will use from a single server instance to the largest scale-out data-center environments.</p>  
           {% with query=query, placeholder=placeholder %}
-            {% include "/certified/shared/_search-results-query-search-bar.html" %}
+            {% include "/certified/search/_search-results-query-search-bar.html" %}
           {% endwith %}
         </div>
       </div>
@@ -46,7 +46,7 @@
   release_filters=release_filters,
   results=results
 %}
-  {% include "certified/shared/category-search-results.html" %}
+  {% include "certified/search/category-search-results.html" %}
 {% endwith %}
   </form>
 </main>

@@ -27,7 +27,7 @@
 
           <div class="p-section--shallow">
             {% with query=query, placeholder=placeholder %}
-              {% include "/certified/shared/_search-results-query-search-bar.html" %}
+              {% include "/certified/search/_search-results-query-search-bar.html" %}
             {% endwith %}
           </div>
         </div>
@@ -46,7 +46,7 @@
       results=results,
       vendor_page="true"
     %}
-      {% include "certified/shared/category-search-results.html" %}
+      {% include "certified/search/category-search-results.html" %}
     {% endwith %}
   </form>
 </main>

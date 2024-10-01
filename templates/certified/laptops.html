@@ -26,7 +26,7 @@
               Many of the world's biggest PC manufacturers certify their laptops for Ubuntu.
             </p>
             {% with query=query, placeholder=placeholder %}
-              {% include "/certified/shared/_search-results-query-search-bar.html" %}
+              {% include "/certified/search/_search-results-query-search-bar.html" %}
             {% endwith %}
           </div>
         </div>
@@ -47,7 +47,7 @@
       release_filters=release_filters,
       results=results
     %}
-      {% include "certified/shared/category-search-results.html" %}
+      {% include "certified/search/category-search-results.html" %}
     {% endwith %}
   </form>
 </main>
